@@ -374,14 +374,18 @@
   </script>
 
 <script>
-  document.querySelectorAll('.accordion-toggle').forEach((arrow, index) => {
-    arrow.addEventListener('click', () => {
-    const answer = document.querySelectorAll('.answer')[index];
-    const isVisible = answer.style.display === "block";
-    answer.style.display = isVisible ? "none" : "block";
-    arrow.classList.toggle("rotate", !isVisible);
-    });
+  document.querySelectorAll('.accordion-item').forEach((item) => {
+    const content = item.querySelector('.accordion-content');
+    const answer = item.querySelector('.answer');
+    const arrow = item.querySelector('.component-58-icon');
 
+    content.addEventListener('click', () => {
+      const isVisible = answer.style.display === 'block';
+      answer.style.display = isVisible ? 'none' : 'block';
+      if (arrow) {
+        arrow.classList.toggle('rotate', !isVisible);
+      }
+    });
   });
 
   window.addEventListener("DOMContentLoaded", () => {
@@ -389,8 +393,8 @@
       answer.style.display = "none";
     });
   });
-
 </script>
+
 
 
 </body>

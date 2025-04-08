@@ -17,8 +17,13 @@
 	gap: 32px;
 }
 body {
-	cursor: url("photos\ChatGPT Image Apr 8, 2025, 11_48_42 AM.png") 0 0, auto;
+	cursor: url("photos/cursor-dress.png") 0 0, auto;
   }
+  
+.accordion-content {
+	cursor: pointer;
+  }
+  
   
   
 .navigation {
